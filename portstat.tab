@@ -1,0 +1,6 @@
+#port;entete;IP Locale;Port Local;IP Remote;Port Remote
+port;APACHE;;8080;;
+port;NODEJS;;8081;;
+port;WAS_HTTP;;9083;;
+port;TEST;;;127.0.0.1;2067
+port;WAS_ORACLE;;;;1521
