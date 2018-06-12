@@ -2,8 +2,8 @@
 # -- perl --
 # author : JP Drascek
 # add option "no_entete"
-# add variable hp_ux to take in account separator "." instead of ":" between IP and PORT (netstat command) 
-
+# add variable hp_ux to take in account separator "." instead of ":" between IP and PORT (netstat command) SAME ON AIX
+# bug tested on AIX 6.1 perl 5.8.8, last char of fields read in portstat.tab is removed, so on AIX you must add a blank after remote port in portstat.tab
 $hp_ux = 0; 
 
 my $option = $ARGV[0];
@@ -64,7 +64,6 @@ printf ("%4d-%02d-%02d %02d:%02d:%02d |",$year+1900,$mon+1,$mday,$hour,$min,$sec
  	{
  	  $type="local";
 
- 	  # -2 is next to last (penultimate) in array
     $indice = -2; 
     $valeurIP = @params[2];
   }
